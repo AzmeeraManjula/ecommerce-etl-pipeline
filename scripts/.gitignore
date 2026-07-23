@@ -1,0 +1,27 @@
+# Raw data files (too large)
+dataraw/
+data/raw/
+data/ecommerce.db
+ecommerce.db
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+
+# VS Code settings
+.vscode/
+
+# Tableau packaged workbook
+*.twbx
+
+# Temporary Microsoft Word files
+~$*.docx
+
+# Error logs
+error.txt
+*.log
+ingestion_log.txt

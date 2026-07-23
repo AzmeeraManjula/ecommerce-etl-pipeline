@@ -1,0 +1,9 @@
+order_status,order_count,avg_delay
+delivered,96478,-11.875888877371203
+shipped,1107,
+canceled,625,-27.833333333333332
+unavailable,609,
+invoiced,314,
+processing,301,
+created,5,
+approved,2,
