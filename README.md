@@ -1,5 +1,6 @@
 python -c "
-content = '''# 🛒 End-to-End E-Commerce Supply Chain ETL Pipeline
+content = '''
+# 🛒 End-to-End E-Commerce Supply Chain ETL Pipeline
 
 > A fully automated data pipeline processing 99,441 e-commerce orders using Python, SQL, PySpark, SQLite and Tableau.
 
