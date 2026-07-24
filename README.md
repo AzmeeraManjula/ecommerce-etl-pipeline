@@ -1,30 +1,27 @@
 python -c "
-content = open('README.md', 'w', encoding='utf-8')
-content.write('''# End-to-End E-Commerce Supply Chain ETL Pipeline
+content = '''# 🛒 End-to-End E-Commerce Supply Chain ETL Pipeline
 
-A fully automated data pipeline processing 99,441 e-commerce orders using Python, SQL, PySpark, SQLite and Tableau.
+> A fully automated data pipeline processing 99,441 e-commerce orders using Python, SQL, PySpark, SQLite and Tableau.
 
 ---
 
-## Key Findings
+## 📊 Key Findings
 
 | KPI | Result |
 |-----|--------|
-| Total Orders | 99,441 |
-| Delivery Success Rate | 97.02% |
-| Average Delivery | 11.87 days EARLY |
-| Top Category | Health and Beauty - R$1,258,681 |
-| Data Period | 25 months (2016-2018) |
+| 📦 Total Orders | 99,441 |
+| ✅ Delivery Success Rate | 97.02% |
+| ⏱ Average Delivery | 11.87 days EARLY |
+| 🏆 Top Category | Health and Beauty - R\$1,258,681 |
+| 📅 Data Period | 25 months (2016-2018) |
 
 ---
 
-## Pipeline Architecture
-
-Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Dashboard --> Automated Daily
+## 🏗 Pipeline Architecture
 
 ---
 
-## Tech Stack
+## 🛠 Technology Stack
 
 | Technology | Version | Purpose |
 |-----------|---------|---------|
@@ -39,7 +36,7 @@ Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Das
 
 ---
 
-## Dataset
+## 📁 Dataset
 
 | Property | Detail |
 |----------|--------|
@@ -65,108 +62,80 @@ Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Das
 
 ---
 
-## Folder Structure
-
-ecommerce-etl-pipeline/
-|-- scripts/
-|   |-- 02_transform.py          (Data cleaning + ETL + SQLite load)
-|   |-- 03_pyspark_transform.py  (PySpark order status aggregation)
-|   |-- 04_load.py               (KPI computation + final DB load)
-|   |-- 05_automate.py           (Daily pipeline scheduler)
-|-- sql/
-|   |-- 01_data_validation.sql   (SQL KPI queries)
-|-- data/
-|   |-- processed/
-|       |-- orders_clean.csv
-|       |-- kpi_category_revenue.csv
-|       |-- kpi_order_status.csv
-|       |-- kpi_monthly_orders.csv
-|-- docs/
-|   |-- Workflow_Spec_Doc_Manjula.docx
-|-- .gitignore
-|-- README.md
+## 📂 Folder Structure
 
 ---
 
-## How to Run
+## ▶ How to Run
 
 ### 1. Clone the repository
-git clone https://github.com/AzmeeraManjula/ecommerce-etl-pipeline.git
-cd ecommerce-etl-pipeline
 
 ### 2. Install dependencies
-pip install pandas sqlalchemy pyspark schedule openpyxl
 
 ### 3. Download dataset
 Download from Kaggle and place all 9 CSV files in dataraw/archive/
 
 ### 4. Run pipeline step by step
 
-Step 1 - Clean data and load to SQLite:
-python scripts/02_transform.py
-
-Step 2 - PySpark transformation:
-python scripts/03_pyspark_transform.py
-
-Step 3 - Compute KPIs and final load:
-python scripts/04_load.py
-
 ### 5. Run automated pipeline
-python scripts/05_automate.py
-(Runs pipeline once immediately, then daily at 8:00 AM)
+
+Runs pipeline once immediately, then daily at 8:00 AM
 
 ---
 
-## Tableau Dashboard
+## 📈 Tableau Dashboard
 
 3 interactive KPI visualizations built in Tableau:
 
 | Chart | Type | Insight |
 |-------|------|---------|
-| Top 10 Categories by Revenue | Horizontal Bar | Health and Beauty leads at R$1.25M |
+| Top 10 Categories by Revenue | Horizontal Bar | Health and Beauty leads at R\$1.25M |
 | Order Status Distribution | Pie Chart | 97.02% of orders delivered successfully |
 | Monthly Orders Trend | Line Chart | 30x growth from 200 to 6,500 orders/month |
 
 ---
 
-## Key Insights
+## 🔍 Key Insights
 
-- Health and Beauty is the #1 revenue category at R$1,258,681
-- 97.02% of all orders are delivered successfully
-- Orders arrive 11.87 days early on average
-- Order volume grew 30x from Sep 2016 to Sep 2018
-- Only 0.63% of orders are cancelled
+- 🥇 Health and Beauty is the #1 revenue category at R\$1,258,681
+- ✅ 97.02% of all orders are delivered successfully
+- ⏰ Orders arrive 11.87 days early on average
+- 📈 Order volume grew 30x from Sep 2016 to Sep 2018
+- ❌ Only 0.63% of orders are cancelled
 
 ---
 
-## Pipeline Specification
+## 🗺 Pipeline Specification
 
 Full workflow specification document available in docs/Workflow_Spec_Doc_Manjula.docx
 
 Covers:
-- Project objectives and scope
-- Data source documentation
-- Pipeline architecture (7 stages)
-- KPI definitions and targets
-- Technology stack justification
-- 7-day project timeline
+- ✅ Project objectives and scope
+- ✅ Data source documentation
+- ✅ Pipeline architecture (7 stages)
+- ✅ KPI definitions and targets
+- ✅ Technology stack justification
+- ✅ 7-day project timeline
 
 ---
 
-## Author
+## 👩‍💼 Author
 
-Azmeera Manjula
+**Azmeera Manjula**
 MBA - Business Analytics | ISBR Business School, Bengaluru
-Email: manjulaazmeera2@gmail.com
-GitHub: https://github.com/AzmeeraManjula
+📧 manjulaazmeera2@gmail.com
+🐙 https://github.com/AzmeeraManjula
 
 ---
 
-## License
+## 📄 License
 
 This project uses the Olist Brazilian E-Commerce Dataset
 available under CC BY-NC-SA 4.0 license.
-''')
-content.close()
-print('README created successfully!')
+'''
+
+with open('README.md', 'w', encoding='utf-8') as f:
+    f.write(content)
+print('README with emojis created successfully!')
 "
+
