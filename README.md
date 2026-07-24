@@ -138,5 +138,9 @@ available under CC BY-NC-SA 4.0 license.
 with open('README.md', 'w', encoding='utf-8') as f:
     f.write(content)
 print('README with emojis created successfully!')
+
+## Dashboard
+
+![E-Commerce Dashboard](dashboard.png)
 "
 
