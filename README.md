@@ -1,33 +1,30 @@
-python -c "
-import codecs
-f = codecs.open('README.md', 'w', encoding='utf-8')
-f.write(u'''# End-to-End E-Commerce Supply Chain ETL Pipeline \U0001f6d2
+
+# -*- coding: utf-8 -*-
+readme_content = """
+
+# 🛒 End-to-End E-Commerce Supply Chain ETL Pipeline
 
 > A fully automated data pipeline processing 99,441 e-commerce orders using Python, SQL, PySpark, SQLite and Tableau.
 
 ---
 
-## Key Findings \U0001f4ca
+## 📊 Key Findings
 
 | KPI | Result |
 |-----|--------|
 | Total Orders | 99,441 |
 | Delivery Success Rate | 97.02% |
 | Average Delivery | 11.87 days EARLY |
-| Top Category | Health and Beauty |
+| Top Category | Health and Beauty - R$1,258,681 |
 | Data Period | 25 months (2016-2018) |
 
 ---
 
-## Pipeline Architecture \U0001f3d7
-
-\`\`\`
-Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Dashboard --> Automated Daily
-\`\`\`
+## 🏗 Pipeline Architecture
 
 ---
 
-## Technology Stack \U0001f6e0
+## 🛠 Technology Stack
 
 | Technology | Version | Purpose |
 |-----------|---------|---------|
@@ -42,7 +39,7 @@ Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Das
 
 ---
 
-## Dataset \U0001f4c1
+## 📁 Dataset
 
 | Property | Detail |
 |----------|--------|
@@ -68,62 +65,42 @@ Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Das
 
 ---
 
-## Folder Structure \U0001f4c2
-
-\`\`\`
-ecommerce-etl-pipeline/
-|-- scripts/
-|   |-- 02_transform.py
-|   |-- 03_pyspark_transform.py
-|   |-- 04_load.py
-|   |-- 05_automate.py
-|-- sql/
-|   |-- 01_data_validation.sql
-|-- data/processed/
-|   |-- orders_clean.csv
-|   |-- kpi_category_revenue.csv
-|   |-- kpi_order_status.csv
-|   |-- kpi_monthly_orders.csv
-|-- docs/
-|   |-- Workflow_Spec_Doc_Manjula.docx
-|-- .gitignore
-|-- README.md
-\`\`\`
+## 📂 Folder Structure
 
 ---
 
-## How to Run
+## ▶ How to Run
 
 ### 1. Clone the repository
-\`\`\`bash
+```bash
 git clone https://github.com/AzmeeraManjula/ecommerce-etl-pipeline.git
 cd ecommerce-etl-pipeline
-\`\`\`
+```
 
 ### 2. Install dependencies
-\`\`\`bash
+```bash
 pip install pandas sqlalchemy pyspark schedule openpyxl
-\`\`\`
+```
 
 ### 3. Download dataset
 Download from Kaggle and place all 9 CSV files in dataraw/archive/
 
 ### 4. Run pipeline step by step
-\`\`\`bash
+```bash
 python scripts/02_transform.py
 python scripts/03_pyspark_transform.py
 python scripts/04_load.py
-\`\`\`
+```
 
 ### 5. Run automated pipeline
-\`\`\`bash
+```bash
 python scripts/05_automate.py
-\`\`\`
+```
 Runs pipeline once immediately, then daily at 8:00 AM
 
 ---
 
-## Tableau Dashboard \U0001f4ca
+## 📈 Tableau Dashboard
 
 | Chart | Type | Insight |
 |-------|------|---------|
@@ -135,7 +112,7 @@ Runs pipeline once immediately, then daily at 8:00 AM
 
 ---
 
-## Key Insights \U0001f50d
+## 🔍 Key Insights
 
 - Health and Beauty is #1 revenue category at R$1,258,681
 - 97.02% of all orders delivered successfully
@@ -145,7 +122,7 @@ Runs pipeline once immediately, then daily at 8:00 AM
 
 ---
 
-## Pipeline Specification \U0001f5fa
+## 🗺 Pipeline Specification
 
 Full workflow specification in docs/Workflow_Spec_Doc_Manjula.docx
 
@@ -159,7 +136,7 @@ Covers:
 
 ---
 
-## Author
+## 👩 Author
 
 **Azmeera Manjula**
 MBA - Business Analytics | ISBR Business School, Bengaluru
@@ -168,11 +145,14 @@ GitHub: https://github.com/AzmeeraManjula
 
 ---
 
-## License
+## 📄 License
 
 This project uses the Olist Brazilian E-Commerce Dataset
 available under CC BY-NC-SA 4.0 license.
-''')
-f.close()
-print('Done!')
-"
+"""
+
+with open('README.md', 'w', encoding='utf-8') as f:
+    f.write(readme_content)
+
+print("README.md created successfully with emojis!")
+
