@@ -1,28 +1,34 @@
 python -c "
-content = '''
-# 🛒 End-to-End E-Commerce Supply Chain ETL Pipeline
+readme = open('README.md', 'w', encoding='utf-8')
+readme.write('''# \U0001f6d2 End-to-End E-Commerce Supply Chain ETL Pipeline
 
 > A fully automated data pipeline processing 99,441 e-commerce orders using Python, SQL, PySpark, SQLite and Tableau.
 
+![Dashboard](dashboard.png)
+
 ---
 
-## 📊 Key Findings
+## \U0001f4ca Key Findings
 
 | KPI | Result |
 |-----|--------|
-| 📦 Total Orders | 99,441 |
-| ✅ Delivery Success Rate | 97.02% |
-| ⏱ Average Delivery | 11.87 days EARLY |
-| 🏆 Top Category | Health and Beauty - R\$1,258,681 |
-| 📅 Data Period | 25 months (2016-2018) |
+| \U0001f4e6 Total Orders | 99,441 |
+| \u2705 Delivery Success Rate | 97.02% |
+| \u23f1 Average Delivery | 11.87 days EARLY |
+| \U0001f3c6 Top Category | Health and Beauty - R\$1,258,681 |
+| \U0001f4c5 Data Period | 25 months (2016-2018) |
 
 ---
 
-## 🏗 Pipeline Architecture
+## \U0001f3d7 Pipeline Architecture
+
+\`\`\`
+Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Dashboard --> Automated Daily
+\`\`\`
 
 ---
 
-## 🛠 Technology Stack
+## \U0001f6e0 Technology Stack
 
 | Technology | Version | Purpose |
 |-----------|---------|---------|
@@ -37,7 +43,7 @@ content = '''
 
 ---
 
-## 📁 Dataset
+## \U0001f4c1 Dataset
 
 | Property | Detail |
 |----------|--------|
@@ -63,84 +69,109 @@ content = '''
 
 ---
 
-## 📂 Folder Structure
+## \U0001f4c2 Folder Structure
+
+\`\`\`
+ecommerce-etl-pipeline/
+|-- scripts/
+|   |-- 02_transform.py
+|   |-- 03_pyspark_transform.py
+|   |-- 04_load.py
+|   |-- 05_automate.py
+|-- sql/
+|   |-- 01_data_validation.sql
+|-- data/processed/
+|   |-- orders_clean.csv
+|   |-- kpi_category_revenue.csv
+|   |-- kpi_order_status.csv
+|   |-- kpi_monthly_orders.csv
+|-- docs/
+|   |-- Workflow_Spec_Doc_Manjula.docx
+|-- .gitignore
+|-- README.md
+\`\`\`
 
 ---
 
-## ▶ How to Run
+## \u25b6 How to Run
 
 ### 1. Clone the repository
+\`\`\`bash
+git clone https://github.com/AzmeeraManjula/ecommerce-etl-pipeline.git
+cd ecommerce-etl-pipeline
+\`\`\`
 
 ### 2. Install dependencies
+\`\`\`bash
+pip install pandas sqlalchemy pyspark schedule openpyxl
+\`\`\`
 
 ### 3. Download dataset
 Download from Kaggle and place all 9 CSV files in dataraw/archive/
 
 ### 4. Run pipeline step by step
+\`\`\`bash
+python scripts/02_transform.py
+python scripts/03_pyspark_transform.py
+python scripts/04_load.py
+\`\`\`
 
 ### 5. Run automated pipeline
-
+\`\`\`bash
+python scripts/05_automate.py
+\`\`\`
 Runs pipeline once immediately, then daily at 8:00 AM
 
 ---
 
-## 📈 Tableau Dashboard
-
-3 interactive KPI visualizations built in Tableau:
+## \U0001f4c8 Tableau Dashboard
 
 | Chart | Type | Insight |
 |-------|------|---------|
-| Top 10 Categories by Revenue | Horizontal Bar | Health and Beauty leads at R\$1.25M |
-| Order Status Distribution | Pie Chart | 97.02% of orders delivered successfully |
-| Monthly Orders Trend | Line Chart | 30x growth from 200 to 6,500 orders/month |
+| Top 10 Categories by Revenue | Bar Chart | Health and Beauty leads at R\$1.25M |
+| Order Status Distribution | Pie Chart | 97.02% delivered successfully |
+| Monthly Orders Trend | Line Chart | 30x growth over 25 months |
 
 ---
 
-## 🔍 Key Insights
+## \U0001f50d Key Insights
 
-- 🥇 Health and Beauty is the #1 revenue category at R\$1,258,681
-- ✅ 97.02% of all orders are delivered successfully
-- ⏰ Orders arrive 11.87 days early on average
-- 📈 Order volume grew 30x from Sep 2016 to Sep 2018
-- ❌ Only 0.63% of orders are cancelled
+- \U0001f947 Health and Beauty is #1 revenue category at R\$1,258,681
+- \u2705 97.02% of all orders delivered successfully
+- \u23f0 Orders arrive 11.87 days early on average
+- \U0001f4c8 Order volume grew 30x from Sep 2016 to Sep 2018
+- \u274c Only 0.63% of orders cancelled
 
 ---
 
-## 🗺 Pipeline Specification
+## \U0001f5fa Pipeline Specification
 
-Full workflow specification document available in docs/Workflow_Spec_Doc_Manjula.docx
+Full workflow specification in docs/Workflow_Spec_Doc_Manjula.docx
 
 Covers:
-- ✅ Project objectives and scope
-- ✅ Data source documentation
-- ✅ Pipeline architecture (7 stages)
-- ✅ KPI definitions and targets
-- ✅ Technology stack justification
-- ✅ 7-day project timeline
+- \u2705 Project objectives and scope
+- \u2705 Data source documentation
+- \u2705 Pipeline architecture (7 stages)
+- \u2705 KPI definitions and targets
+- \u2705 Technology stack justification
+- \u2705 7-day project timeline
 
 ---
 
-## 👩‍💼 Author
+## \U0001f469\u200d\U0001f4bc Author
 
 **Azmeera Manjula**
 MBA - Business Analytics | ISBR Business School, Bengaluru
-📧 manjulaazmeera2@gmail.com
-🐙 https://github.com/AzmeeraManjula
+\U0001f4e7 manjulaazmeera2@gmail.com
+\U0001f419 https://github.com/AzmeeraManjula
 
 ---
 
-## 📄 License
+## \U0001f4c4 License
 
 This project uses the Olist Brazilian E-Commerce Dataset
 available under CC BY-NC-SA 4.0 license.
-'''
-
-with open('README.md', 'w', encoding='utf-8') as f:
-    f.write(content)
-print('README with emojis created successfully!')
-
-## Dashboard
-
-![E-Commerce Dashboard](dashboard.png)
+''')
+readme.close()
+print('README created!')
 "
-
