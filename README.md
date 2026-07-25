@@ -1,26 +1,25 @@
 python -c "
-readme = open('README.md', 'w', encoding='utf-8')
-readme.write('''# \U0001f6d2 End-to-End E-Commerce Supply Chain ETL Pipeline
+import codecs
+f = codecs.open('README.md', 'w', encoding='utf-8')
+f.write(u'''# End-to-End E-Commerce Supply Chain ETL Pipeline \U0001f6d2
 
 > A fully automated data pipeline processing 99,441 e-commerce orders using Python, SQL, PySpark, SQLite and Tableau.
 
-![Dashboard](dashboard.png)
-
 ---
 
-## \U0001f4ca Key Findings
+## Key Findings \U0001f4ca
 
 | KPI | Result |
 |-----|--------|
-| \U0001f4e6 Total Orders | 99,441 |
-| \u2705 Delivery Success Rate | 97.02% |
-| \u23f1 Average Delivery | 11.87 days EARLY |
-| \U0001f3c6 Top Category | Health and Beauty - R\$1,258,681 |
-| \U0001f4c5 Data Period | 25 months (2016-2018) |
+| Total Orders | 99,441 |
+| Delivery Success Rate | 97.02% |
+| Average Delivery | 11.87 days EARLY |
+| Top Category | Health and Beauty |
+| Data Period | 25 months (2016-2018) |
 
 ---
 
-## \U0001f3d7 Pipeline Architecture
+## Pipeline Architecture \U0001f3d7
 
 \`\`\`
 Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Dashboard --> Automated Daily
@@ -28,7 +27,7 @@ Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Das
 
 ---
 
-## \U0001f6e0 Technology Stack
+## Technology Stack \U0001f6e0
 
 | Technology | Version | Purpose |
 |-----------|---------|---------|
@@ -43,7 +42,7 @@ Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Das
 
 ---
 
-## \U0001f4c1 Dataset
+## Dataset \U0001f4c1
 
 | Property | Detail |
 |----------|--------|
@@ -69,7 +68,7 @@ Raw CSVs --> Python Ingest --> Clean and Transform --> SQLite DB --> Tableau Das
 
 ---
 
-## \U0001f4c2 Folder Structure
+## Folder Structure \U0001f4c2
 
 \`\`\`
 ecommerce-etl-pipeline/
@@ -93,7 +92,7 @@ ecommerce-etl-pipeline/
 
 ---
 
-## \u25b6 How to Run
+## How to Run
 
 ### 1. Clone the repository
 \`\`\`bash
@@ -124,54 +123,56 @@ Runs pipeline once immediately, then daily at 8:00 AM
 
 ---
 
-## \U0001f4c8 Tableau Dashboard
+## Tableau Dashboard \U0001f4ca
 
 | Chart | Type | Insight |
 |-------|------|---------|
-| Top 10 Categories by Revenue | Bar Chart | Health and Beauty leads at R\$1.25M |
+| Top 10 Categories by Revenue | Bar Chart | Health and Beauty leads at R$1.25M |
 | Order Status Distribution | Pie Chart | 97.02% delivered successfully |
 | Monthly Orders Trend | Line Chart | 30x growth over 25 months |
 
----
-
-## \U0001f50d Key Insights
-
-- \U0001f947 Health and Beauty is #1 revenue category at R\$1,258,681
-- \u2705 97.02% of all orders delivered successfully
-- \u23f0 Orders arrive 11.87 days early on average
-- \U0001f4c8 Order volume grew 30x from Sep 2016 to Sep 2018
-- \u274c Only 0.63% of orders cancelled
+![Dashboard](dashboard.png)
 
 ---
 
-## \U0001f5fa Pipeline Specification
+## Key Insights \U0001f50d
+
+- Health and Beauty is #1 revenue category at R$1,258,681
+- 97.02% of all orders delivered successfully
+- Orders arrive 11.87 days early on average
+- Order volume grew 30x from Sep 2016 to Sep 2018
+- Only 0.63% of orders cancelled
+
+---
+
+## Pipeline Specification \U0001f5fa
 
 Full workflow specification in docs/Workflow_Spec_Doc_Manjula.docx
 
 Covers:
-- \u2705 Project objectives and scope
-- \u2705 Data source documentation
-- \u2705 Pipeline architecture (7 stages)
-- \u2705 KPI definitions and targets
-- \u2705 Technology stack justification
-- \u2705 7-day project timeline
+- Project objectives and scope
+- Data source documentation
+- Pipeline architecture (7 stages)
+- KPI definitions and targets
+- Technology stack justification
+- 7-day project timeline
 
 ---
 
-## \U0001f469\u200d\U0001f4bc Author
+## Author
 
 **Azmeera Manjula**
 MBA - Business Analytics | ISBR Business School, Bengaluru
-\U0001f4e7 manjulaazmeera2@gmail.com
-\U0001f419 https://github.com/AzmeeraManjula
+Email: manjulaazmeera2@gmail.com
+GitHub: https://github.com/AzmeeraManjula
 
 ---
 
-## \U0001f4c4 License
+## License
 
 This project uses the Olist Brazilian E-Commerce Dataset
 available under CC BY-NC-SA 4.0 license.
 ''')
-readme.close()
-print('README created!')
+f.close()
+print('Done!')
 "
