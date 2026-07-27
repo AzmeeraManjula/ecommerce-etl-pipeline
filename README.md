@@ -8,6 +8,15 @@ readme_content = """
 
 ---
 
+
+## 🏗️ Pipeline Architecture
+
+![Pipeline Architecture](images/pipeline_architecture.png)
+
+## 📊 Tableau Dashboard
+
+![Dashboard](images/dashboard.png)
+
 ## 📊 Key Findings
 
 | KPI | Result |
@@ -17,10 +26,6 @@ readme_content = """
 | Average Delivery | 11.87 days EARLY |
 | Top Category | Health and Beauty - R$1,258,681 |
 | Data Period | 25 months (2016-2018) |
-
----
-
-## 🏗 Pipeline Architecture
 
 ---
 
