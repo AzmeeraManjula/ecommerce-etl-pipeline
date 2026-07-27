@@ -8,14 +8,21 @@ readme_content = """
 
 ---
 
-
 ## 🏗️ Pipeline Architecture
 
-![Pipeline Architecture](images/pipeline_architecture.png)
+<p align="center">
+  <img src="images/pipeline_architecture.png" alt="Pipeline Architecture" width="900">
+</p>
+
+---
 
 ## 📊 Tableau Dashboard
 
-![Dashboard](images/dashboard.png)
+<p align="center">
+  <img src="images/dashboard.png" alt="Dashboard" width="900">
+</p>
+
+---
 
 ## 📊 Key Findings
 
